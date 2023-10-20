@@ -79,7 +79,8 @@ Diagram and step-by-step description of the flow of our solution:
 
 - Currently we generated the model based on limited sample data. In future we will capturing more data and will work more model
 
-![Roadmap](./images/roadmap.jpg)
+- So far, the model predicts the water shortage of a country-specific region using apparent data, we will automate this process and implement it at the city  level  using real-time data from cities, as well as integrate continuous water quality monitoring  of the reservoir or water sources and establish an alarm system to notify local governments or the community of water shortages or poor water quality.
+
 
 ## Additional details
 

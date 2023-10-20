@@ -32,9 +32,25 @@ The Model can provide early warning to the authorities and communities.
 
 ### Our idea
 
-INSTRUCTIONS: Replace this paragraph with a longer description of your solution. In about 500 words, describe your solution in more detail. Include the real-world problem you identified, describe the technological solution you have created, and explain how it’s an improvement over existing solutions. You can supply additional documentation in this source code repository that you link to as well.
+Water scarcity poses a critical challenge worldwide, necessitating innovative solutions to address its complex dynamics. To combat this pressing issue, the development of a water scarcity prediction model emerges as a strategic imperative.
 
-More detail is available in our [description document](./docs/DESCRIPTION.md).
+This predictive model combines multifaceted data, including historical rainfall patterns, water usage statistics, population growth trends, water resources and their live capacities, enabling the accurate forecast of potential water scarcity in specific region, providing early warnings to authorities and communities.
+
+This proactive approach enables the implementation of timely and effective measures to manage water resources efficiently and mitigate the adverse effects of water scarcity.
+
+The foundation of this solution rests upon comprehensive data gathering and meticulous feature engineering. By collecting extensive datasets on long-term precipitation levels, water consumption behaviors, the model gains a comprehensive understanding of the intricate interplay between these variables. Through meticulous feature engineering, key metrics such as average annual rainfall, per capita water usage, providing crucial insights into the factors influencing water scarcity trends.
+
+In the subsequent stages, a judicious selection of the appropriate predictive modeling technique is crucial. Options range from time series analysis to the implementation of sophisticated machine learning algorithms, including Random Forest, Support Vector Machines, and Neural Networks. By evaluating the historical data and training the model with the selected approach, the system gains the ability to recognize patterns and correlations that signal an impending risk of water scarcity.
+
+Rigorous validation procedures, incorporating metrics like Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE), ensure the model's reliability and accuracy in predicting potential water scarcity scenarios. The interpretative capabilities of the model are essential in providing a comprehensive understanding of the underlying dynamics of water scarcity. Through sophisticated visualization tools, the model's predictions are translated into easily understandable insights, highlighting critical thresholds and trends that indicate an elevated risk of water scarcity. 
+
+This interpretative framework equips decision-makers with actionable intelligence, empowering them to devise proactive strategies aimed at mitigating the impact of water scarcity.
+
+The integration of the predictive model into an early warning system constitutes a pivotal step in the solution's implementation. By incorporating the model into an efficient and responsive early warning mechanism, authorities and communities receive timely alerts about impending water scarcity issues. This facilitates the proactive implementation of various measures, including water conservation campaigns, infrastructural enhancements, and sustainable resource management strategies, aimed at averting or minimizing the detrimental impact of water scarcity.
+
+The solution's efficacy is contingent upon its continuous improvement and refinement. Regular updates and maintenance, coupled with the integration of the latest data, are instrumental in enhancing the model's predictive capabilities and ensuring its adaptability to evolving environmental dynamics. By actively monitoring the model's performance, stakeholders can ensure its sustained relevance and reliability in providing timely, data-driven insights into potential water scarcity challenges.
+
+
 
 ## Technology implementation
 
@@ -53,14 +69,15 @@ Diagram and step-by-step description of the flow of our solution:
 
 ## Presentation materials
 
-_INSTRUCTIONS: The following deliverables should be officially posted to your My Team > Submissions section of the [Call for Code Global Challenge resources site](https://cfc-prod.skillsnetwork.site/), but you can also include them here for completeness. Replace the examples seen here with your own deliverable links._
-
 ### Solution demo video
 
 [![Watch the video]()
 
 ### Project development roadmap
 
+- Currently this solution is limited to one region i.e. India with limited dataset. Planning to run this model globally 
+
+- Currently we generated the model based on limited sample data. In future we will capturing more data and will work more model
 
 ![Roadmap](./images/roadmap.jpg)
 

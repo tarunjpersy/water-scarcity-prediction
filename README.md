@@ -75,6 +75,12 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 _INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
 
+### How to run the project
+
+1. Deploy the application on your local system.
+2. Send your POST request to http://localhost:5000/scarcity from your UI. We have used PRD visualization application which helps us showcase the predicted value.
+3. Enter all the mandatory fields and as many of the optional fields as known.
+
 
 ### Contributing
 

@@ -23,7 +23,7 @@ This README provides detailed instructions for setting up and using the applicat
 
    ```bash
    git clone 
-   cd LandslidePredictionSystem
+   cd WaterScarcityPrediction
    
 4. **Install Dependencies:**
    Install the required Python packages listed in the requirements.txt file:

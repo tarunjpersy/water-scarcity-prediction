@@ -38,7 +38,7 @@ This README provides detailed instructions for setting up and using the applicat
    ```
    python -m flask run
    ```
-   This will start the application, and you can send you POST requests at http://localhost:5000/scarcity.
+   This will start the application, and you can send POST requests at http://localhost:5000/scarcity.
 
 2. The result will return the predicted water scarcity. 
 

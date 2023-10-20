@@ -71,7 +71,7 @@ Diagram and step-by-step description of the flow of our solution:
 
 ### Solution demo video
 
-[![Watch the video]()
+[![Watch the video](https://www.youtube.com/watch?v=4E3azYPV7Fc)
 
 ### Project development roadmap
 

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Inputs</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .formBox{
+            padding: 0.5rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1 class="heading">Please input the data below</h1>
+        <div class="formdesign">
+            <label for="year">Year</label>
+            <br><input type="number" id="year"/>
+        </div>
+        <div class="formdesign">
+            <label for="state">State</label>
+            <br><input type="text" id="state"/>
+        </div>
+        <div class="formdesign">
+            <label for="pop">Population</label>
+            <br><input type="text" id="pop"/>
+        </div>
+        <div class="formdesign">
+            <label for="aar">Annual Average Rainfall in (mm):</label>
+            <br><input type="number" id="aar"/>
+        </div>
+        <div class="formdesign">
+            <label for="pcwa">Per Capita Water Availability</label>
+            <br><select type="text" id="pcwa">
+                <option value="">--Select--</option>
+                <option value="Absolute scarcity [&lt;500 m3]">Absolute scarcity [&lt;500 m3]</option>
+                <option value="Scarcity [500-1000 m3]">Scarcity [500-1000 m3]</option>
+                <option value="Stress [1000-1700 m3]">Stress [1000-1700 m3]</option>
+                <option value="No Stress [&gt;1700 m3]">No Stress [&gt;1700 m3]</option>
+              </select>
+        </div>
+        <div class="formdesign">
+            <label for="norm">No of Reservoirs Monitored</label>
+            <br><input type="text" id="norm"/>
+        </div>
+        <div class="formdesign">
+            <label for="lc">Live capacity in FRL (in BCM)</label>
+            <br><input type="text" id="lc"/>
+        </div>
+        <div class="formdesign">
+            <label for="cy">Current year</label>
+            <br><input type="text" id="cy"/>
+        </div>
+        <div class="formdesign">
+            <label for="ly">Last year</label>
+            <br><input type="text" id="ly"/>
+        </div>
+        <div class="formdesign">
+            <label for="liy">Last 10 Years Average</label>
+            <br><input type="text" id="liy"/>
+        </div>
+        <div class="formdesign">
+            <label for="cyp">Current year %</label>
+            <br><input type="text" id="cyp"/>
+        </div>
+        <div class="formdesign">
+            <label for="lyp">Last year %</label>
+            <br><input type="text" id="lyp"/>
+        </div>
+        <div class="formdesign">
+            <label for="lia">Last 10 Years Average %</label>
+            <br><input type="text" id="lia"/>
+        </div>
+        <div class="formdesign">
+            <label for="pdfa">Percentage departure from 10 years average</label>
+            <br><input type="text" id="pdfa"/>
+        </div>
+        <div class="formdesign">
+            <label for="agwr">Annual Ground Water Recharge</label>
+            <br><input type="text" id="agwr"/>
+        </div>
+        <div class="formdesign">
+            <label for="tnd">Total Natural Discharges</label>
+            <br><input type="text" id="tnd"/>
+        </div>
+        <div class="formdesign">
+            <label for="cagw">Current Annual Ground Water Extraction</label>
+            <br><input type="text" id="cagw"/>
+        </div>
+        </div>
+        <div class="formdesign">
+            <label for="sogw">Stage of Ground Water Extraction (%)</label>
+            <br><input type="text" id="sogw"/>
+        </div>        
+        </div>
+        <div class="formdesign">
+            <label for="ngwa">Net Ground Water Availability for future use</label>
+            <br><input type="text" id="ngwa"/>
+        </div>        
+
+        <div class="but">
+            <button id="but">Submit</button>
+        </div>
+        <div id="msg">
+            <pre></pre>
+        </div>
+    </form>
+    <script>
+        let usrdata = [];
+            const addUserData = (ev)=>{
+            ev.preventDefault();  //to stop the form submitting
+            let data = {
+                year: document.getElementById('year').value,
+                state: document.getElementById('state').value,
+                pop: document.getElementById('pop').value,
+                aar: document.getElementById('aar').value,
+                pcwa: document.getElementById('pcwa').value,
+                norm: document.getElementById('norm').value,
+                lc: document.getElementById('lc').value,
+                cy: document.getElementById('cy').value,
+                ly: document.getElementById('ly').value,
+                liy: document.getElementById('liy').value,
+                cyp: document.getElementById('cyp').value,
+                lyp: document.getElementById('lyp').value,
+                lia: document.getElementById('lia').value,
+                pdfa: document.getElementById('pdfa').value,
+                agwr: document.getElementById('agwr').value,
+                tnd: document.getElementById('tnd').value,
+                cagw: document.getElementById('cagw').value,
+                sogw: document.getElementById('sogw').value,
+                ngwa: document.getElementById('ngwa').value
+            }
+            usrdata.push(data);
+            //document.forms[0].reset(); // to clear the form for the next entries
+            document.querySelector('form').reset();
+
+            //for display purposes only
+            //console.log('added' , {usrdata} );
+            //let pre = document.querySelector('#msg pre');
+            //pre.textContent = '\n' + JSON.stringify(usrdata, '\t', 2);
+
+            let jsonData = JSON.stringify(usrdata);
+
+            //fetch('https://172.20.10.14:8001/scarcity'
+            //fetch('https://v2.convertapi.com/upload',{
+            fetch('https://10.46.40.15:5001/scarcity',{
+                method: 'POST', 
+                headers:{
+                    'content-type': 'application/json'
+                },
+                body: jsonData
+            }).then(res => res.json)
+            .then(result => console.log(result.data))
+            .catch(err => console.log(err))
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('but').addEventListener('click', addUserData);
+        });
+    </script>
+</body>
+</html>

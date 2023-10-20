@@ -4,7 +4,7 @@ _INSTRUCTIONS: This GitHub repository serves as a template you can use to create
 
 _New to Git and GitHub? This free online course will get you up to speed quickly: [Getting Started with Git and GitHub](https://www.coursera.org/learn/getting-started-with-git-and-github)_.
 
-# Replace this heading with your team/submission name
+# Water Scarcity Prediction
 
 - [Project summary](#project-summary)
   - [The issue we are hoping to solve](#the-issue-we-are-hoping-to-solve)
@@ -18,14 +18,11 @@ _New to Git and GitHub? This free online course will get you up to speed quickly
   - [Project development roadmap](#project-development-roadmap)
 - [Additional details](#additional-details)
   - [How to run the project](#how-to-run-the-project)
-- [About this template](#about-this-template)
   - [Contributing](#contributing)
   - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
-
-_INSTRUCTIONS: Complete all required deliverable sections below._
 
 ## Project summary
 
@@ -73,8 +70,6 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 ## Additional details
 
-_INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
-
 ### How to run the project
 
 1. Deploy the application on your local system.
@@ -92,6 +87,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ### Authors
 
+- **Aditya Kapadne** 
+- **Purvang Acharya**
+- **Rohit Paranjape**
+- **Shourya Nagle**
+- **Tarun Kumar J**
 
 ### License
 
